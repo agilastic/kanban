@@ -1,5 +1,7 @@
 <header class="list_title">
-	<span class="edit js-edit-list-title" 
+ <button class="destroy js-destroy-list"
+  				id="<%= list.id %>">Delete</button>
+	<span class="edit js-edit-list-title"
 				id="list_<%= list.id %>"><%= list.escape("title") %></span>
   <button class="archive_list entypo-cancel"
   				data-list-id="<%= list.id %>"></button>

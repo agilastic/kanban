@@ -1,20 +1,20 @@
 Kanban.Views.ListShow = Backbone.View.extend({
 	template: JST['lists/show'],
 	tagName: "div",
-  className: "list",
+        className: "list",
 
-	initialize: function () {
-		var that = this;
+   initialize: function () {
+   var that = this;
     // that.model.on("change", that.render, that);
     that.model.on("add", that.render, that);
 		that.model.get("cards").on("add", that.render, that);
 		that.model.get("cards").on("remove", that.render, that);
 		that.model.get("cards").on("change", that.render, that);
 	},
-
-	events: {
+    events: {
   	"click div.card": "cardClick",
     "submit form.add_card": "addCard",
+    "click  button.js-destroy-list": "deleteList",
     "click button.archive_card": "archiveCard",
 	},
 
@@ -102,6 +102,12 @@ Kanban.Views.ListShow = Backbone.View.extend({
 			}
 		});
   },
+    deleteList: function (event) {
+        //console.log(JSON.stringify());
+        var self = this.id;
+        console.log(self);
+        //self.delete();
+  },
 
   archiveCard: function (event) {
     event.stopPropagation();
@@ -154,7 +160,7 @@ Kanban.Views.ListShow = Backbone.View.extend({
 			cssclass : "animated fadeIn"
     });
 
-		// sortable for cards
+   	// sortable for cards
     sortCardsUrl = "/api/cards/sort"
     var $cards = that.$("div.cards");
     $cards.sortable({
