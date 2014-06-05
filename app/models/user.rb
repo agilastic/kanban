@@ -42,9 +42,10 @@ class User < ActiveRecord::Base
   has_secure_password
 
   def gravatar_url(size = 32)
-    md5 = Digest::MD5.hexdigest(self.email)
-    "http://www.gravatar.com/avatar/#{md5}?s=#{size}"
+      md5 = Digest::MD5.hexdigest(self.email)
+      "http://www.gravatar.com/avatar/#{md5}?s=#{size}"
   end
+
 
   def as_json(options = {})
     super(options.merge(only: [:username, :email, :bio],

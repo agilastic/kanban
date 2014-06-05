@@ -461,6 +461,8 @@ section.board-show { }
   button.destroy {
     float:right;
     width: 60px;
+    background: transparent;
+    border: 0px;
   }
   button.archive_list {
   	border: none;
