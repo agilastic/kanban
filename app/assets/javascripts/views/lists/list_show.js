@@ -103,11 +103,12 @@ Kanban.Views.ListShow = Backbone.View.extend({
 		});
   },
     deleteList: function (event) {
-        //console.log(JSON.stringify());
-        var self = this.id;
-        console.log(self);
-        //self.delete();
-  },
+        var self = this;
+        setTimeout(function () {
+            $("#list_" + self.model.id).addClass("animated flipOutX");
+            self.model.destroy();
+        }, 300);
+    },
 
   archiveCard: function (event) {
     event.stopPropagation();

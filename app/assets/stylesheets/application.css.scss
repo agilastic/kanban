@@ -215,14 +215,16 @@ section.boards-index {
   }
 
 	section.board-sidebar {
-	  float: left;
-		display: inline-block;
+	  float: right;
+      margin: -3px 15px 0 0;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
 
-		width: 10%;
-	  //min-height: 220px;
-	  padding: 10px;
-	  margin: 0;
+
 	}
+    .board-sidebar p {
+    }
 
 	ul.users {
 		margin: 0;
@@ -361,7 +363,7 @@ section.board-show { }
   }
 
 	.list_title span {
-		@include ellipsis(200px);
+		@include ellipsis(180px);
 	}
 
   .edit:hover {
@@ -456,7 +458,10 @@ section.board-show { }
   }
 
 	div.add_list:hover { }
-
+  button.destroy {
+    float:right;
+    width: 60px;
+  }
   button.archive_list {
   	border: none;
   	background: transparent;

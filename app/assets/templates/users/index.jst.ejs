@@ -1,19 +1,4 @@
-<header>
-	<p>Board Members</p>
-</header>
-
-<ul class="users">
+<span style="width:100px;height: 27px;">Mitglieder</span>
 	<% users.each(function (user) { %>
-		<li class="user"
-				data-user-id="<%= user.id %>">
-			<img class="avatar" src="<%= user.escape("gravatar_url") %>" />
-		</li>
+			<img class="avatar" data-user-id="<%= user.id %>" src="<%= user.escape("gravatar_url") %>" />
 	<% }); %>
-</ul>
-
-<form class="add_user">
-	<input type="text"
-         name="user_id"
-         placeholder="Add a member ..." />
-	<input type="submit" value="Add Member" />
-</form>
