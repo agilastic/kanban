@@ -2,11 +2,11 @@
 	<h3>
 		<span class="edit js-edit-card-title"><%= card.escape("title") %></span>
 	</h3>
-	<h4><span><%= list.escape("title") %></span></h4>
+	<!--<span>Liste: <%= list.escape("title") %></span>-->
 </header>
 
 <p>
-	<%= card.escape("description") %>
+Beschreibung:<br><span class="edit js-edit-card-description"><%= card.escape("description") %></span>
 </p>
 
 <div class="members">

@@ -116,6 +116,16 @@ Kanban.Views.CardShow = Backbone.View.extend({
       onblur: "submit",
 			cssclass : "animated fadeIn"
     });
+    // inline edit for card title
+        that.$(".js-edit-card-description").editable(function (value, settings) {
+          card.set({ description: value });
+          card.save();
+          return value;
+        }, {
+          submit: "Save",
+          onblur: "submit",
+    			cssclass : "animated fadeIn"
+        });
 
 		// decorate comment timestamps
 	 	that.$el.find("abbr.timeago").timeago();

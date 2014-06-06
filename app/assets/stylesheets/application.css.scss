@@ -507,7 +507,9 @@ section.board-show { }
   .card:hover button.archive_card {
     opacity: .35;
   }
-
+  .list:hover button.archive_card {
+    opacity: .35;
+  }
   button.archive_list:hover,
   button.archive_card:hover {
     cursor: pointer;
