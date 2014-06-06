@@ -31,3 +31,4 @@ Kanban.Routers.Main = Backbone.Router.extend({
   }
 
 });
+

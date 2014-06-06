@@ -83,8 +83,6 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     multi_json (1.8.4)
-    mysql2 (0.3.16)
-    pg (0.17.1)
     polyglot (0.3.3)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -175,8 +173,6 @@ DEPENDENCIES
   jquery-ui-rails
   less-rails
   meta_request
-  mysql2
-  pg
   pry-rails
   rabl
   rails (= 3.2.13)

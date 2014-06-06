@@ -10,7 +10,7 @@ gem 'jquery-ui-rails'
 gem 'rabl'
 gem 'therubyracer'
 gem 'thin'
-gem 'mysql2'
+#gem 'mysql2'
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
@@ -34,6 +34,3 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-group :production do
-  gem 'pg'
-end

@@ -77,7 +77,6 @@ Kanban.Views.CardShow = Backbone.View.extend({
 						cards.reset(resortedCards.cards);
 
 						console.log("cards add-commits");
-						console.log(cards);
 				
 				});
 				

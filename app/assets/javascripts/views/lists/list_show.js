@@ -59,6 +59,7 @@ Kanban.Views.ListShow = Backbone.View.extend({
 
     // add list_id to attrs
     attrs.card.list_id = list.get("id");
+    //:id, :username, :email, :full_name, :bio, :gravatar_url
 
 		// fail is no card title
     if (!attrs.card.title) {
@@ -80,6 +81,12 @@ Kanban.Views.ListShow = Backbone.View.extend({
     }
 
 		// save card
+
+
+    attrs.card.assignee_id = $('#current_user_id').text();
+    
+    console.log(this);
+    console.log(attrs.card);
 		card.save(attrs.card, {
 			success: function (data) {
 				var list_id = list.id;
@@ -104,8 +111,8 @@ Kanban.Views.ListShow = Backbone.View.extend({
   },
     deleteList: function (event) {
         var self = this;
-        setTimeout(function () {
             $("#list_" + self.model.id).addClass("animated flipOutX");
+        setTimeout(function () {
             self.model.destroy();
         }, 300);
     },
@@ -200,4 +207,9 @@ Kanban.Views.ListShow = Backbone.View.extend({
 
 		return that;
 	}
+
+
+
 });
+
+

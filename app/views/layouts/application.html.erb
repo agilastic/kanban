@@ -23,6 +23,7 @@
       <% if logged_in? %>
 	  <p>Eingeloggt als: <%= current_user.username %></br> (<%= link_to "logout", logout_url %>)</p>
         <%= link_to image_tag(current_user.gravatar_url(30), class: "avatar"), "#" %>
+        <div id='current_user_id' style="visibility:hidden; display:none;"><%= current_user.id %></div>
       <% else %>
         <p><%= link_to "login", login_url %></p>
       <% end %>
@@ -35,4 +36,5 @@
 </div>
 
 </body>
+
 </html>

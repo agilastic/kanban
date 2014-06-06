@@ -1,6 +1,6 @@
 <header class="list_title">
- <button class="destroy js-destroy-list" style="text-align: right; align: right;"
-  				id="<%= list.id %>">Löschen</button>
+ <button class="js-destroy-list archive_card" style="text-align: right; align: right;"
+  				id="<%= list.id %>">x</button>
  <span class="edit js-edit-list-title"
 				id="list_<%= list.id %>"><%= list.escape("title") %></span>
   <button class="archive_list entypo-cancel"
@@ -14,7 +14,7 @@
 		<input type="text"
            class="card_title"
            name="card[title]"
-           placeholder="Add a card ..." />
+           placeholder="Karte hinzufügen ..." />
 		<input type="submit" value="Add Card" />
 	</form>
 </div>
